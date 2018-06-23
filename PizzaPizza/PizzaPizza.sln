@@ -21,8 +21,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PizzaPizza", "PizzaPizza\",
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "58676"
+		SlnRelativePath = "PizzaPizza\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{774D8BA2-1F2E-4B69-A9FA-F27BBF1C4B75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
