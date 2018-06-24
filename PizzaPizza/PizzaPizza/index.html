@@ -5,6 +5,7 @@
     <title>PizzaPizza</title>
     <link rel="stylesheet" href="/pizzaSyles.css">
     <script src="locationPizza.js"></script>
+    <script src="modernizr-custom.js"></script>
 </head>
 <body onload="initialize()">
     <content id="pizza-app">
@@ -21,6 +22,10 @@
             <input id="address" type="text" value="Apple Valley, MN">
             <input type="button" value="Encode" onclick="initialize(), codeAddress(), deliveryTime()">
         </div>
+        <div>
+            <input type="button" value="Submit!" onclick="deliveryTime(), totalCost()" />
+            <input type="button" value="Where's My Pizza?" onclick="whenPizza()" />
+        </div>
 
     </content>
 
@@ -31,7 +36,7 @@
       
 
       </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=callback=initMap"
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAahxk9QSCCV2hZQREKG25aUZLqbM00StQ&callback=initMap"
                 async defer></script>
     
 
