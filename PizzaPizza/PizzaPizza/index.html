@@ -6,17 +6,71 @@
     <link rel="stylesheet" href="/pizzaSyles.css">
     <script src="locationPizza.js"></script>
     <script src="modernizr-custom.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body onload="initialize()">
-    <content id="pizza-app">
-        <div id="size-placement"></div>
-        <div id="meats-placement"></div>
-        <div id="cheese-placement"></div>
-        <div id="crust-placement"></div>
-        <div id="sauce-placement"></div>
-        <div id="veggies-placement"></div>
-        <div id="delivery"></div>
-    </content>
+
+    <section id="" class="Pizza">
+        <div class="row">
+            <div class="col">
+                <H5 class="title-tags ">
+                    <a data-toggle="modal" href="#sizeModal">
+                        Pizza Size
+                    </a>
+                </H5>
+                <p class="click-me">Click above for more information!</p>
+            </div>
+            <div class="col langs">
+                <H5 class="title-tags">
+                    <a data-toggle="modal" href="#meatsModal">
+                        Meat Toppings
+                    </a>
+
+                </H5>
+                <p class="click-me">Click above for more information!</p>
+            </div>
+            <div class="col langs">
+                <H5 class="title-tags">
+                    <a data-toggle="modal" href="#cheeseModal">
+                        Cheese!
+                    </a>
+                </H5>
+                <p class="click-me">Click above for more information!</p>
+            </div>
+        </div>
+    </section>
+    <section id="" class="Pizza">
+        <div class="row row-langs">
+            <div class="col langs">
+                <H5 class="title-tags skill-spacing">
+                    <a data-toggle="modal" href="#crustModal">
+                        Crust Selection
+                    </a>
+                </H5>
+                <p class="click-me">Click above for more information!</p>
+            </div>
+            <div class="col langs">
+                <H5 class="title-tags">
+                    <a data-toggle="modal" href="#sauceModal">
+                        Sauce Selection
+                    </a>
+
+                </H5>
+                <p class="click-me">Click above for more information!</p>
+            </div>
+            <div class="col langs">
+                <H5 class="title-tags">
+                    <a data-toggle="modal" href="#veggiesModal">
+                        Veggies!
+                    </a>
+                </H5>
+                <p class="click-me">Click above for more information!</p>
+            </div>
+        </div>
+    </section>
+    <section id="education"></section>
+    <section id=""></section>
     <content id="address-delivery">
         <div>
             <input id="address" type="text" value="Apple Valley, MN">
@@ -28,17 +82,140 @@
         </div>
 
     </content>
+    <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Pizza Sizing</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
-    
-    
-      <div id="map"></div>
-      <script>
-      
+                    <input type="radio" name="size" value="male" checked> Personal $6.00
+                    <br>
+                    <input type="radio" name="size" value="female"> Medium $10.00
+                    <br>
+                    <input type="radio" name="size" value="other"> Large $14.00
+                    <br />
+                    <input type="radio" name="size" value="other"> XL $16.00
 
-      </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAahxk9QSCCV2hZQREKG25aUZLqbM00StQ&callback=initMap"
-                async defer></script>
-    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meatsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Meat Toppings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="checkbox" name="meats" value="Bike"> I have a bike<br>
+                    <input type="checkbox" name="meats" value="Car" checked> I have a car<br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cheeseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="skill_list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="crustModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="skill_list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sauceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="skill_list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="veggiesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="skill_list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="map"></div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAahxk9QSCCV2hZQREKG25aUZLqbM00StQ&callback=initMap"
+            async defer></script>
+
 
 </body>
 </html>

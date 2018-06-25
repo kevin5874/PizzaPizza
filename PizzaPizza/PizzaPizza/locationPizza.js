@@ -63,7 +63,7 @@ function deliveryTime() {
                     //alert(Time);
                     var hours = Time.getHours(); 
                     var minutes;
-                    if (Time.getMinutes() < 10) {
+                    if (Time.getMinutes() < 10) { //making minutes look right in the time for delivery when delivery is expected in the first 10 minutes of the hour
                         minutes = "0" + Time.getMinutes();
                     }
                     else {
