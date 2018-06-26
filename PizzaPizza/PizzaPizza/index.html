@@ -7,7 +7,7 @@
     <script src="locationPizza.js"></script>
     <script src="modernizr-custom.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <script src="jquery-3.3.1.min.js"></script>
 </head>
 <body onload="initialize()">
 
@@ -77,7 +77,7 @@
             <input type="button" value="Encode" onclick="initialize(), codeAddress(), deliveryTime()">
         </div>
         <div>
-            <input type="button" value="Submit!" onclick="deliveryTime(), totalCost()" />
+            <input type="button" id="submit" value="Submit!" onclick="deliveryTime(), totalCost()" />
             <input type="button" value="Where's My Pizza?" onclick="whenPizza()" />
         </div>
 
@@ -93,13 +93,13 @@
                 </div>
                 <div class="modal-body">
 
-                    <input type="radio" name="size" value="male" checked> Personal $6.00
+                    <input type="radio" name="size" value="6.00" checked> Personal $6.00
                     <br>
-                    <input type="radio" name="size" value="female"> Medium $10.00
+                    <input type="radio" name="size" value="10.00"> Medium $10.00
                     <br>
-                    <input type="radio" name="size" value="other"> Large $14.00
+                    <input type="radio" name="size" value="14.00"> Large $14.00
                     <br />
-                    <input type="radio" name="size" value="other"> XL $16.00
+                    <input type="radio" name="size" value="16.00"> XL $16.00
 
                 </div>
 
@@ -116,8 +116,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <input type="checkbox" name="meats" value="Bike"> I have a bike<br>
-                    <input type="checkbox" name="meats" value="Car" checked> I have a car<br>
+                    <input type="checkbox" name="pepperoni" value="1">Pepperoni<br>
+                    <input type="checkbox" name="Sausage" value="1">Sausage<br>
+                    <input type="checkbox" name="Canadian Bacon" value="1">Canadian Bacon<br>
+                    <input type="checkbox" name="ground beef" value="1">Ground Beef<br>
+                    <input type="checkbox" name="Anchovy" value="1">Anchovy<br>
+                    <input type="checkbox" name="Chicken" value="1">Chicken<br>
                 </div>
 
             </div>
@@ -127,18 +131,17 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Cheese</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <ul class="skill_list">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                    <input type="radio" name="regular" value="0" checked> Regular
+                    <br>
+                    <input type="radio" name="extra" value="3"> Extra $3.00
+                    <br>
+                    <input type="radio" name="none" value="0"> None
                 </div>
 
             </div>
@@ -148,18 +151,21 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Crust</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <ul class="skill_list">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                    <input type="radio" name="crust" value="0" checked> PLain
+                    <br>
+                    <input type="radio" name="crust2" value="0"> Garlic Butter
+                    <br>
+                    <input type="radio" name="crust3" value="3"> Stuffed $3.00
+                    <br />
+                    <input type="radio" name="crust4" value="0"> Spicy
+                    <br />
+                    <input type="radio" name="crust5" value="0"> House Special
                 </div>
 
             </div>
@@ -169,18 +175,19 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sauce</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <ul class="skill_list">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                    <input type="radio" name="sauce" value="0"> White Sauce
+                    <br>
+                    <input type="radio" name="sauce2" value="0"> BBQ sauce
+                    <br>
+                    <input type="radio" name="sauce3" value="0"> No sauce
+                    <br />
+                    <input type="radio" name="sauce4" value="0" checked> Marinara Sauce
                 </div>
 
             </div>
@@ -190,18 +197,18 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Veggies</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <ul class="skill_list">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                    <input type="checkbox" name="veg" value="1">tomatoes<br>
+                    <input type="checkbox" name="veg2" value="1">onions<br>
+                    <input type="checkbox" name="veg3" value="1">olives<br>
+                    <input type="checkbox" name="veg4" value="1">green Peppers<br>
+                    <input type="checkbox" name="veg5" value="1">mushrooms<br>
+                    <input type="checkbox" name="veg6" value="1">pineapple<br>
                 </div>
 
             </div>
@@ -209,13 +216,16 @@
     </div>
 
 
+    <div>
+        <h3 id="total">blank</h3>
+    </div>
     <div id="map"></div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAahxk9QSCCV2hZQREKG25aUZLqbM00StQ&callback=initMap"
             async defer></script>
-
-
+    <script src="pizzaTotal.js"></script>
+   
 </body>
 </html>
