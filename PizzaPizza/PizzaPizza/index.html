@@ -74,7 +74,7 @@
     <content id="address-delivery">
         <div>
             <input id="address" type="text" value="Apple Valley, MN">
-            <input type="button" value="Encode" onclick="initialize(), codeAddress(), deliveryTime()">
+            
         </div>
         <div>
             <input type="button" id="submit" value="Submit!" onclick="deliveryTime(), totalCost()" />
@@ -93,13 +93,13 @@
                 </div>
                 <div class="modal-body">
 
-                    <input type="radio" name="size" value="6.00" checked> Personal $6.00
+                    <input type="radio" name="size" value="6.00" data-name="Personal" checked> <p>Personal</p>
                     <br>
-                    <input type="radio" name="size" value="10.00"> Medium $10.00
+                    <input type="radio" name="size" value="10.00" data-name="Medium"> <p>Medium</p>
                     <br>
-                    <input type="radio" name="size" value="14.00"> Large $14.00
+                    <input type="radio" name="size" value="14.00" data-name="Large"> <p>Large</p>
                     <br />
-                    <input type="radio" name="size" value="16.00"> XL $16.00
+                    <input type="radio" name="size" value="16.00" data-name="XL"> <p>XL</p>
 
                 </div>
 
@@ -116,12 +116,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <input type="checkbox" name="pepperoni" value="1">Pepperoni<br>
-                    <input type="checkbox" name="Sausage" value="1">Sausage<br>
-                    <input type="checkbox" name="Canadian Bacon" value="1">Canadian Bacon<br>
-                    <input type="checkbox" name="ground beef" value="1">Ground Beef<br>
-                    <input type="checkbox" name="Anchovy" value="1">Anchovy<br>
-                    <input type="checkbox" name="Chicken" value="1">Chicken<br>
+                    <input type="checkbox" data-name="Pepperoni" value="1">Pepperoni<br>
+                    <input type="checkbox" data-name="Sausage" value="1">Sausage<br>
+                    <input type="checkbox" data-name="Canadian Bacon" value="1">Canadian Bacon<br>
+                    <input type="checkbox" data-name="ground beef" value="1">Ground Beef<br>
+                    <input type="checkbox" data-name="Anchovy" value="1">Anchovy<br>
+                    <input type="checkbox" data-name="Chicken" value="1">Chicken<br>
                 </div>
 
             </div>
@@ -136,12 +136,12 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <input type="radio" name="regular" value="0" checked> Regular
+                <div class="modal-body cheese">
+                    <input type="radio" name="cheese" value="0"  data-name="Regular" checked> <p>Regular</p>
                     <br>
-                    <input type="radio" name="extra" value="3"> Extra $3.00
+                    <input type="radio" name="cheese" value="3" data-name="Extra"> <p>Extra</p> $3.00
                     <br>
-                    <input type="radio" name="none" value="0"> None
+                    <input type="radio" name="cheese" value="0" data-name="No"> <p>None</p>
                 </div>
 
             </div>
@@ -156,16 +156,16 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <input type="radio" name="crust" value="0" checked> PLain
+                <div class="modal-body crust">
+                    <input type="radio" name="crust" value="0"  data-name="Plain" checked> <p>Plain</p>
                     <br>
-                    <input type="radio" name="crust2" value="0"> Garlic Butter
+                    <input type="radio" name="crust" value="0"  data-name="Garlic Butter" >  <p>Garlic Butter</p>
                     <br>
-                    <input type="radio" name="crust3" value="3"> Stuffed $3.00
+                    <input type="radio" name="crust" value="3"  data-name="Stuffed" > <p>Stuffed</p> $3.00
                     <br />
-                    <input type="radio" name="crust4" value="0"> Spicy
+                    <input type="radio" name="crust" value="0"  data-name="Spicy" > <p>Spicy</p>
                     <br />
-                    <input type="radio" name="crust5" value="0"> House Special
+                    <input type="radio" name="crust" value="0" data-name="House Special"> <p>House Special</p>
                 </div>
 
             </div>
@@ -180,14 +180,16 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <input type="radio" name="sauce" value="0"> White Sauce
-                    <br>
-                    <input type="radio" name="sauce2" value="0"> BBQ sauce
-                    <br>
-                    <input type="radio" name="sauce3" value="0"> No sauce
-                    <br />
-                    <input type="radio" name="sauce4" value="0" checked> Marinara Sauce
+                <div class="modal-body sauce">
+                    <form>
+                        <input type="radio" name="Sauce" value="0" data-name="White Sauce"> <p>White Sauce</p>
+                        <br>
+                        <input type="radio" name="Sauce" value="0" data-name="BBQ sauce"> <p>BBQ sauce</p>
+                        <br>
+                        <input type="radio" name="Sauce" value="0" data-name="No Sauce"> <p>No Sauce</p>
+                        <br />
+                        <input type="radio" name="Sauce" value="0" data-name="Marinara Sauce" checked > <p>Marinara Sauce</p>
+                    </form>
                 </div>
 
             </div>
@@ -203,12 +205,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <input type="checkbox" name="veg" value="1">tomatoes<br>
-                    <input type="checkbox" name="veg2" value="1">onions<br>
-                    <input type="checkbox" name="veg3" value="1">olives<br>
-                    <input type="checkbox" name="veg4" value="1">green Peppers<br>
-                    <input type="checkbox" name="veg5" value="1">mushrooms<br>
-                    <input type="checkbox" name="veg6" value="1">pineapple<br>
+                    <input type="checkbox" data-name="tomatoes" value="1">tomatoes<br>
+                    <input type="checkbox" data-name="Onions" value="1">onions<br>
+                    <input type="checkbox" data-name="Olives" value="1">olives<br>
+                    <input type="checkbox" data-name="Green Peppers" value="1">green Peppers<br>
+                    <input type="checkbox" data-name="mushrooms" value="1">mushrooms<br>
+                    <input type="checkbox" data-name="Pineapple" value="1">pineapple<br>
                 </div>
 
             </div>
